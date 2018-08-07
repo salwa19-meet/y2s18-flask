@@ -1,1 +1,19 @@
 <!-- Put the HTML template for your page here! -->
+<!doctype html>
+    <html>
+    <head>
+    	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+        <body>
+            <h1> football</h1>
+            <p> sports sports </p>
+        {% if like_same_sports == true    %}
+          <ul>
+                {% for sport in sports %}
+                <li> {{sport}} </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+        </body>
+    </html>
